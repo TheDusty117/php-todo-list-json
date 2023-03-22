@@ -6,5 +6,5 @@ createApp({
     return{
       title: 'ToDo List'
     }
-  }
+  },
 }).mount('#app')
