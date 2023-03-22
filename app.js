@@ -6,13 +6,14 @@ createApp({
     return{
       title: 'ToDo List',
       todos: [], //crei array vuoto
+      newTodo: '',
     }
   },
   methods:{ 
 
     //metodo che salva i task on keyup enter
     saveTask(){
-      console.log('save task!')
+      console.log('save task!', this.newTodo) //uso v-model su input keyup, per prender il valore di cio che si scrive 
     },
 
     fetchTodoList(){ // --3--  faccio la chiamata al server.php per prendere il json FUNZIONE CHE FA CHIAMATA

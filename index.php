@@ -21,7 +21,7 @@
       <div class="container">
         <h1> {{ title }} </h1>
         
-        <input @keyup.enter="saveTask" class="form-control my-4" type="text" name="todo" placeholder="New Task" aria-laberl="default input example">
+        <input @keyup.enter="saveTask" v-model="newTodo" class="form-control my-4" type="text" name="todo" placeholder="New Task" aria-laberl="default input example">
 
         <div>
           <ul class="list-group">
