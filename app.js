@@ -9,6 +9,12 @@ createApp({
     }
   },
   methods:{ 
+
+    //metodo che salva i task on keyup enter
+    saveTask(){
+      console.log('save task!')
+    },
+
     fetchTodoList(){ // --3--  faccio la chiamata al server.php per prendere il json FUNZIONE CHE FA CHIAMATA
       axios.get('server.php')
       .then(res => {   //--5-- Recupero la risposta PS. a questo punto noi abbiamo direttamente l'array, VEDI CONSOLE LOG
