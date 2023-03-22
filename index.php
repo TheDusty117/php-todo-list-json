@@ -13,14 +13,18 @@
 </head>
 
 <body>
-  <header>
-    <h2>todo list</h2>
-  </header>
+  
+  <div id="app">
+    <section>
 
-  <main>
-    
-  </main>
+      <div class="container">
+        <h1> {{ title }} </h1>
+      </div>
 
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>
