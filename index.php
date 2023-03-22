@@ -20,8 +20,14 @@
 
       <div class="container">
         <h1> {{ title }} </h1>
+        
+        <div>
+          <ul class="list-group">
+            <li v-for="todo in todos" :key="todo" class="list-group-item">{{ todo }}</li>
+          </ul>
+        </div>
+
       </div>
-      
 
     </section>
   </div>

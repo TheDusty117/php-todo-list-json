@@ -5,7 +5,7 @@ createApp({
   data() {
     return{
       title: 'ToDo List',
-      todos: [], //crei array vuoto
+      todos: '' //crei array vuoto
     }
   },
   methods:{ 
@@ -13,6 +13,7 @@ createApp({
       axios.get('server.php')
       .then(res => {   //--5-- Recupero la risposta PS. a questo punto noi abbiamo direttamente l'array, VEDI CONSOLE LOG
         console.log(res.data)
+        this.todos = res.data
       })
       .catch(err => {
         console.log(err)
