@@ -23,7 +23,7 @@
         
         <div>
           <ul class="list-group">
-            <li v-for="todo in todos" :key="todo" class="list-group-item">{{ todo }}</li>
+            <li v-for="todo in todos" :key="todo" class="list-group-item">{{ todo.text }}</li>
           </ul>
         </div>
 

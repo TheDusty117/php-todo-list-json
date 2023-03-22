@@ -15,6 +15,7 @@ $todo_list = json_decode($todo_string,true);
 // (V2) questa sara' la struttura che dovra' avere il mio oggetto Che poi RICODIFICHERO'
 $response = [
   'results' => $todo_list,
+  
 ];
 
 //STAMPIAMO LA RESPONSE
