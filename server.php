@@ -18,9 +18,17 @@ $response = [
   
 ];
 
+$new_todo = isset($_POST['todo']) ? $_POST['todo'] : null;
+
+if($new_todo !== null){
+  $todo_list[] = $new_todo;
+}
+
+
 //STAMPIAMO LA RESPONSE
 // (V3) ricodifico, passandogli response (che e' ora un oggetto)
 echo json_encode($response);
+
 
 
 

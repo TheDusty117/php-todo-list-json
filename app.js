@@ -13,7 +13,24 @@ createApp({
 
     //metodo che salva i task on keyup enter
     saveTask(){
-      console.log('save task!', this.newTodo) //uso v-model su input keyup, per prender il valore di cio che si scrive 
+      console.log('save task!', this.newTodo) //uso v-model su input keyup, per prender il valore di cio che si scrive
+      
+      
+      $data = {
+        todo: this.newTodo
+      }
+
+      //INVIAMO DATI GRAZIE AD UN AUTOMATISMO DI AXIOS
+      axios.post('./server.php',$data,{
+        headers: { //axios ci permette di modificare-aggiungere il content-type degli header .
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(res => {
+        // this.todos = res.data.results
+        this.todos.push(this.newTodo)
+        this.newTodo = ''
+
+      })
     },
 
     fetchTodoList(){ // --3--  faccio la chiamata al server.php per prendere il json FUNZIONE CHE FA CHIAMATA
