@@ -26,8 +26,8 @@ createApp({
           'Content-Type': 'multipart/form-data'
         }
       }).then(res => {
-        // this.todos = res.data.results
-        this.todos.push(this.newTodo)
+        this.todos = res.data.results
+        // this.todos.push(this.newTodo)
         this.newTodo = ''
 
       })

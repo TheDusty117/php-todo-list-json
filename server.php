@@ -13,17 +13,21 @@ header('Content-Type: application/json');
 $todo_list = json_decode($todo_string,true);
 
 // (V2) questa sara' la struttura che dovra' avere il mio oggetto Che poi RICODIFICHERO'
-$response = [
-  'results' => $todo_list,
-  
-];
 
 $new_todo = isset($_POST['todo']) ? $_POST['todo'] : null;
 
+
 if($new_todo !== null){
-  $todo_list[] = $new_todo;
+  $newnew_todo = [
+    'text' => $new_todo,   // in questo passaggio, creo un oggetto che continene il text $new_todo che sarebbe il valore che noi recuperiamo dall'input
+    'done' => false        // quindi newnew_todo e' un oggetto interno che contiene stringa valore ecc.
+  ];
+  $todo_list[] = $newnew_todo;
 }
 
+$response = [
+  'results' => $todo_list,
+];
 
 //STAMPIAMO LA RESPONSE
 // (V3) ricodifico, passandogli response (che e' ora un oggetto)
